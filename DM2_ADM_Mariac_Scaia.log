@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.10)  25 NOV 2024 09:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.10)  25 NOV 2024 11:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -768,12 +768,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<ssd_logo.png, id=23, 301.125pt x 103.38625pt>
+<ssd_logo.png, id=31, 301.125pt x 103.38625pt>
 File: ssd_logo.png Graphic file (type png)
 <use ssd_logo.png>
 Package pdftex.def Info: ssd_logo.png  used on input line 34.
 (pdftex.def)             Requested size: 250.24199pt x 85.9194pt.
-<logo_um_2022_rouge_RVB.png, id=25, 194.6472pt x 71.0655pt>
+<logo_um_2022_rouge_RVB.png, id=33, 194.6472pt x 71.0655pt>
 File: logo_um_2022_rouge_RVB.png Graphic file (type png)
 <use logo_um_2022_rouge_RVB.png>
 Package pdftex.def Info: logo_um_2022_rouge_RVB.png  used on input line 39.
@@ -785,7 +785,7 @@ Package pdftex.def Info: logo_um_2022_rouge_RVB.png  used on input line 39.
 \openout6 = `DM2_ADM_Mariac_Scaia.toc'.
 
  [2]
-<tableau.png, id=49, 1281.78876pt x 260.975pt>
+<tableau.png, id=59, 1281.78876pt x 260.975pt>
 File: tableau.png Graphic file (type png)
 <use tableau.png>
 Package pdftex.def Info: tableau.png  used on input line 55.
@@ -795,7 +795,7 @@ Package pdftex.def Info: tableau.png  used on input line 55.
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 56.
 
-<treillis.png, id=50, 1046.91125pt x 742.775pt>
+<treillis.png, id=60, 1046.91125pt x 742.775pt>
 File: treillis.png Graphic file (type png)
 <use treillis.png>
 Package pdftex.def Info: treillis.png  used on input line 63.
@@ -825,21 +825,21 @@ L3 programming layer <2024-02-20>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `DM2_ADM_Mariac_Scaia.out' has not changed.
-(rerunfilecheck)             Checksum: 85AD5DC2F8E374C70F92E0AD653F03D0;956.
+(rerunfilecheck)             Checksum: 44472FC42EDEEF5F7FB0A84137565427;1461.
  ) 
 Here is how much of TeX's memory you used:
- 37119 strings out of 474116
- 861438 string characters out of 5743681
+ 37123 strings out of 474116
+ 861498 string characters out of 5743681
  1934187 words of memory out of 5000000
- 58898 multiletter control sequences out of 15000+600000
+ 58900 multiletter control sequences out of 15000+600000
  566840 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,87p,831b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.pdf" (4 pages, 315304 bytes).
+Output written on "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.pdf" (4 pages, 316638 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
