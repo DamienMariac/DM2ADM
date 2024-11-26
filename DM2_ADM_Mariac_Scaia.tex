@@ -21,7 +21,7 @@
 \usepackage[labelfont=bf, font=small]{caption}  % Pour personnaliser le titre de la figure
 
 
-\title{TP2 ADM Classification automatique}
+\title{HAX711X - Analyse des Données Multidimensionnelles \\ DM2 Classification automatique}
 \author{SCAIA Matteo et MARIAC Damien}
 \date{\today} 
 
@@ -84,7 +84,64 @@ On remarque également le nœud 17, qui regroupe tous les documentaires. Les car
 
 
 \section{Classification hiérarchique de parcelles forestières tropicales}
+Charger dans le logiciel les données relatives au peuplement arboré de la forêt du bassin du Congo
+(Datagenus.csv). Inspectez le fichier et corrigez-en les erreurs triviales s'il en est. Ces données fournissent
+sur 1000 parcelles de cette forêt: les variables de comptage de 27 espèces d'arbres (gen1, ..., gen27), la
+surface de la parcelle, le type forestier (forest) tel qu'identifié par les écologues . On ne tiendra pas compte
+des autres variables. Calculer la densité de peuplement de chaque espèce par unité de surface pour les 1000
+parcelles. Les parcelles seront traduits en nuage dans l'espace des 27 densités de peuplement.
+
 L4.2 -> justification a l'oral : 1 min
 \subsection{Préparation des données}
+\label{Q1}
+Nous traduisons les observations dans l’espace euclidien, où la distance servira de mesure de dissimilarité globale entre les parcelles. Cette mesure repose sur la comparaison des écarts sur les différentes dimensions (densités des espèces). Puisque toutes les dimensions (espèces) sont supposées avoir une importance équivalente, aucune ne doit dominer le calcul.
+\\
+On note $x_i$ la $i$-ième parcelle. La distance euclidienne entre deux parcelles $x_1$ et $x_2$ est :  
+\[
+d(x_1, x_2) = \sqrt{\sum_{j=1}^{27} (x_1^j - x_2^j)^2}
+\]
+où \( x_1^j \) et \( x_2^j \) représentent respectivement la densité de l'espèce j dans les parcelles 1 et 2.
+\\
+En analysant la contribution de chaque espèce, nous obtenons le tableau suivant :
+\begin{table}[h!]
+    \centering
+    \caption{Contribution des espèces (gen1 à gen11)}
+    \label{tab:pourcentage}
+    \begin{tabular}{@{}l*{11}{c}@{}}
+    \toprule
+     & gen1 & gen2 & gen3 & gen4 & gen5 & gen6 & gen7 & gen8 & gen9 & gen10 & gen11 \\ 
+    \midrule
+    Pourcentage & 
+    0.23 & 0.00 & 0.03 & 0.00 & 0.01 & 0.05 & 0.00 & 64.90 & 0.07 & 0.48 & 1.03 \\ 
+    \bottomrule
+    \end{tabular}
+    \end{table}
+\\
+Nous voyons que les variables ne contribuent pas tous de la même manière. Les contributions des espèces gen1 à gen27 à la distance euclidienne ne sont pas uniformes. Par exemple, gen8 représente 64.90 \% de la distance, ce qui montre que les variations dans cette dimension dominent les calculs de dissimilarité.
+\\
+Nous standardisons les densités de peuplement et on note \( \mathbf{Z} \) la matrice associée :
+
+\[
+z_i^j = \frac{x_i^j - \overline{x}^j}{\sigma_{x^j}}
+\]
+avec \( x_i^j \) la densité de l’espèce \( j \) sur la parcelle \( i \), \( \overline{x}^j \) la moyenne des densités pour l’espèce \( j \), et \( \sigma_{x^j} \) l’écart-type de l’espèce \( j \).\\
+La standardisation assure que chaque dimension contribue de manière équivalente à la mesure de la dissimilarité, indépendamment de son échelle initiale ou de sa variabilité.
 \subsection{CAH des parcelles sur les densités de peuplement}
+À partir des données contenant les densités de peuplement obtenues à la question \ref{Q1} et standardisées, nous allons procéder à une classification des parcelles en fonction de leur peuplement arboré. 
+L’objectif est de regrouper les parcelles en classes homogènes et de déterminer le nombre optimal de classes.
+\\
+Intéressons-nous à la classification automatique avec l'indice de Ward.
+\\\\
+\textbullet\ \underline{Indice de Ward}\\
+En utilisant le code en langage R fournies dans le sujet, nous pouvons réaliser une classification ascendante hiérarchique. L’objectif est de déterminer le nombre optimal de classes prometteuses.
+Nous obtenons le dendogramme suivant :
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{wardC.png}
+    \caption{Dendogramme (indice de Ward)}
+    \label{fig:Ward} 
+\end{figure}
+\\
+Nous avons choisit de couper en 4 classes.
+
 \end{document}
