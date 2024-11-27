@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.10)  26 NOV 2024 22:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.10)  27 NOV 2024 17:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -821,17 +821,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--83
  []
 
 [3 </Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/tableau.png> </Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/treillis.png>]
-<wardC.png, id=72, 1441.385pt x 564.1075pt>
-File: wardC.png Graphic file (type png)
-<use wardC.png>
-Package pdftex.def Info: wardC.png  used on input line 140.
-(pdftex.def)             Requested size: 400.38872pt x 156.6923pt.
+<wardC2.png, id=72, 1441.385pt x 827.09pt>
+File: wardC2.png Graphic file (type png)
+<use wardC2.png>
+Package pdftex.def Info: wardC2.png  used on input line 140.
+(pdftex.def)             Requested size: 400.38872pt x 229.74104pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 130--146
 
  []
 
-[4] [5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/wardC.png>] (/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.aux)
+[4] [5{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/wardC2.png>] (/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -845,14 +845,14 @@ Package rerunfilecheck Info: File `DM2_ADM_Mariac_Scaia.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  37152 strings out of 474116
- 861934 string characters out of 5743681
+ 861941 string characters out of 5743681
  1942187 words of memory out of 5000000
  58922 multiletter control sequences out of 15000+600000
  567794 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,9n,87p,831b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.pdf" (5 pages, 499238 bytes).
+Output written on "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.pdf" (5 pages, 525504 bytes).
 PDF statistics:
  158 PDF objects out of 1000 (max. 8388607)
  111 compressed objects within 2 object streams
