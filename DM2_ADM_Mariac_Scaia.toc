@@ -5,3 +5,5 @@
 \contentsline {section}{\numberline {2}Classification hiérarchique de parcelles forestières tropicales}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Préparation des données}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}CAH des parcelles sur les densités de peuplement}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Classification ascendante hiérarchique}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Autour du $R^2$}{5}{subsubsection.2.2.2}%
