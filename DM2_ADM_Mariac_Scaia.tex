@@ -157,15 +157,17 @@ Pour confirmer notre choix d’utiliser 4 classes, nous pouvons utiliser l’his
     \label{fig:HWard} 
 \end{figure}
 
-On observe sur la figure \ref{fig:HWard} que la différence de coût d'agrégation entre quatres classes et cinq classes n'est pas élevé, on peut donc partitionner en 4 classes.
-On calcul les $R^2$ associé à chaque classe :
+La figure \ref{fig:HWard} illustre que la différence de coût d'agrégation entre une partition en quatre classes et une partition en cinq classes est relativement faible. Par conséquent, une partition en quatre classes semble appropriée. 
+
+Les \( R^2 \) associés à chaque classe sont ensuite calculés :
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{R222.png}
     \caption{Evolution du R2 en fonction du nombre de classe}
     \label{fig:EvolR2} 
 \end{figure}
-Par ce graphique, nous pouvons remarquer que les classes potentielles sont 2,3 et 4. Celle ci sont respectivement donnée par un $R^2$ de 0.072, 0.111 et 0.148. Nous choissons de couper en 4 classes.
+À partir de ce graphique, nous constatons que les partitions potentielles sont en 2, 3 et 4 classes, avec des \( R^2 \) respectifs de 0.072, 0.111 et 0.148. Nous décidons donc d'opter pour une partition en 4 classes.
 \\\\
 \textbullet\ \underline{Indice du saut maximum}
 \\
@@ -182,7 +184,7 @@ Avec l'indice de saut maximum, on obtient le dendogramme suivant:
 \\
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{dendromax4.png}
+    \includegraphics[width=0.5\textwidth]{dendromax4.png}
     \caption{Dendrogramme  indice du saut max}
     \label{fig:dendmax} 
 \end{figure}
@@ -194,7 +196,8 @@ Avec son histogramme associé
     \caption{Histogramme des niveaux saut maximum}
     \label{fig:histomax} 
 \end{figure}
-
+L'examen de la figure \ref{fig:dendmax} révèle la présence de points atypiques, notamment les parcelles 905, 105 et 188, qui se distinguent par leur position en haut à droite du graphique. L'interprétation du nombre optimal de classes à partir de cette figure s'avère délicate. Afin de clarifier cette question, nous avons tracé l'histogramme présenté en figure \ref{fig:histomax}. Celui-ci permet de constater qu'un partitionnement en quatre classes semble le plus pertinent pour notre analyse.
+\\\\
 \textbullet\ \underline{Indice de saut moyen}
 \\
 Soient A et B deux classes, l'indice de saut moyen est définie par :
@@ -212,7 +215,7 @@ On obtient le dendrogramme suivant :
     \centering
     \includegraphics[width=0.7\textwidth]{sautmoyendendro4.png}
     \caption{Dendrogramme  indice du saut moyen}
-    \label{fig:dendmax} 
+    \label{fig:dendmoy} 
 \end{figure}
 
 Avec son histogramme :
@@ -221,9 +224,31 @@ Avec son histogramme :
     \centering
     \includegraphics[width=0.7\textwidth]{histomoyen4.png}
     \caption{histomoy}
-    \label{fig:dendmax} 
+    \label{fig:histomoy} 
 \end{figure}
-
+\textbullet\ \underline{Comparaison}
+\\\\
+Pour évaluer le degré de similarité entre deux partitions \( P \) et \( P' \), nous utilisons l'indice de Rand. Cette mesure repose sur l'examen de toutes les paires d'éléments présentes dans les partitions.
+\\
+Cite le code
+\\
+Nous obtenons les résultats suivant :
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Comparaison des partitions} & \textbf{Indice de Rand} \\
+    \hline
+    \( P_{\text{WARD}} \) et \( P_{\text{MAX}} \) & 0.2639 \\
+    \( P_{\text{WARD}} \) et \( P_{\text{MOYEN}} \) & 0.2629 \\
+    \( P_{\text{MAX}} \) et \( P_{\text{MOYEN}} \) & 0.9980 \\
+    \( P_{\text{MIN}} \) et \( P_{\text{MOYEN}} \) & 0.9960 \\
+    \hline
+    \end{tabular}
+    \caption{Comparaison des partitions à l'aide de l'indice de Rand}
+    \end{table}
+\\
+Les indices de Rand montrent que les partitions obtenues par les méthodes \textit{Ward} et \textit{Max} (0.2639), ainsi que \textit{Ward} et \textit{Moyen} (0.2629), sont relativement peu similaires, indiquant des différences notables dans le regroupement des éléments. En revanche, les partitions \textit{Max} et \textit{Moyen} (0.9980) ainsi que \textit{Min} et \textit{Moyen} (0.9960) sont presque identiques, suggérant une forte similarité dans les regroupements effectués par ces méthodes. Ainsi, les partitions \textit{Max}, \textit{Min}, et \textit{Moyen} se ressemblent beaucoup, tandis que \textit{Ward} produit une partition distincte.
 
 
 
