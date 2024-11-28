@@ -150,17 +150,23 @@ Avec cette indice, nous obtenons le dendogramme suivant :
 \\
 On remarque que l'on peut partitionner notre arbre en 4 classes.
 Pour confirmer notre choix d’utiliser 4 classes, nous pouvons utiliser l’histogramme des niveaux de $\mu_{ward}$.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{histoward.png}
-    \caption{Histogramme des niveaux $\mu_{ward}$}
+    \caption{Histogramme des niveaux $\mu_{Ward}$}
     \label{fig:HWard} 
 \end{figure}
-\\
-On observe sur la figure que la différence de coût d'agrégation entre quatres classes et cinq classes n'est pas élevé, on peut donc partitionner en 4 classes.
-\\
-\\
-\\
+
+On observe sur la figure \ref{fig:HWard} que la différence de coût d'agrégation entre quatres classes et cinq classes n'est pas élevé, on peut donc partitionner en 4 classes.
+On calcul les $R^2$ associé à chaque classe :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{R222.png}
+    \caption{Evolution du R2 en fonction du nombre de classe}
+    \label{fig:EvolR2} 
+\end{figure}
+Par ce graphique, nous pouvons remarquer que les classes potentielles sont 2,3 et 4. Celle ci sont respectivement donnée par un $R^2$ de 0.072, 0.111 et 0.148. Nous choissons de couper en 4 classes.
+\\\\
 \textbullet\ \underline{Indice du saut maximum}
 \\
 La méthode du saut maximum consiste à mesurer la similitude avec la paire la plus eloignée
@@ -219,7 +225,7 @@ Avec son histogramme :
 \end{figure}
 
 
-\subsubsection{Autour du $R^2$}
+
 
 \subsection{Optimisation d'une partition avec les K-means}
 
