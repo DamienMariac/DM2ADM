@@ -11,7 +11,6 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{tikz}
-\usepackage{amsfonts}
 \usepackage{dsfont}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
@@ -45,10 +44,7 @@
 
 \newpage
 \section{Treillis de Galois}
-\subsection{Introduction}
-Le treillis de Galois est une structure mathématique utilisée en analyse de données pour extraire des règles d’implication. Il est construit à partir de données décrites par des propriétés booléennes, permettant de représenter les relations entre ces propriétés et les ensembles d’objets associés. 
-Le treillis de Galois peut également intégrer des relations liant les données entre elles.
-\subsection{Interprétation et création du treillis de Galois}
+\subsection{Création du treillis}
 Dans cette question, nous allons analyser le treillis de Galois construit à partir des données fournies par le sujet afin de modéliser les relations entre les films et leurs caractéristiques.
 \begin{figure}[h]
     \centering
@@ -65,6 +61,8 @@ Dans cette question, nous allons analyser le treillis de Galois construit à par
     \label{fig:treillis} 
 \end{figure}
 \\
+\subsection{Interpreation}
+
 Dans un treillis de Galois, les nœuds situés aux extrémités correspondent soit à l’ensemble de tous les individus (en haut), soit à l’ensemble de toutes les caractéristiques (en bas). Ces nœuds étant trop généraux ou trop spécifiques, leur analyse n’est pas nécessaire.
 \\
 \\
@@ -91,7 +89,6 @@ surface de la parcelle, le type forestier (forest) tel qu'identifié par les éc
 des autres variables. Calculer la densité de peuplement de chaque espèce par unité de surface pour les 1000
 parcelles. Les parcelles seront traduits en nuage dans l'espace des 27 densités de peuplement.
 
-L4.2 -> justification a l'oral : 1 min
 \subsection{Préparation des données}
 \label{Q1}
 Nous traduisons les observations dans l’espace euclidien, où la distance servira de mesure de dissimilarité globale entre les parcelles. Cette mesure repose sur la comparaison des écarts sur les différentes dimensions (densités des espèces). Puisque toutes les dimensions (espèces) sont supposées avoir une importance équivalente, aucune ne doit dominer le calcul.
@@ -128,11 +125,22 @@ avec \( x_i^j \) la densité de l’espèce \( j \) sur la parcelle \( i \), \( 
 La standardisation assure que chaque dimension contribue de manière équivalente à la mesure de la dissimilarité, indépendamment de son échelle initiale ou de sa variabilité.
 \subsection{CAH des parcelles sur les densités de peuplement}
 \subsubsection{Classification ascendante hiérarchique}
-Dans cette section, nous procéderons à la classification des parcelles en fonction de leur peuplement arboré. L'objectif est de déterminer le nombre optimal de classes pertinentes pour cette partition. À partir des données standardisées représentant les densités de peuplement obtenues à la question \ref{Q1}, nous utiliserons le code en langage R fourni dans le sujet pour effectuer une classification ascendante hiérarchique. Cette méthode nous permettra d’identifier les classes les plus adaptées à la caractérisation des parcelles.
-\\\\
+Dans cette section, nous procéderons à la classification des parcelles en fonction de leur peuplement arboré. L'objectif est de déterminer le nombre optimal de classes pertinentes pour cette partition. À partir des données standardisées représentant les densités de peuplement obtenues à la question \ref{Q1}, nous utiliserons le code en langage R fourni dans le sujet pour effectuer une classification ascendante hiérarchique (CAH). Cette méthode nous permettra d’identifier les classes les plus adaptées à la caractérisation des parcelles.
+Nous allons utiliser divers indice d'agrégation (Ward, maximum, moyen) qui permettent de mesurer la difficulté d'agrégation de deux classes.
+L'indice de saut minimum étant à part nous ne l'utiliserons pas. En effet, ses résultats sont trop différents. Il permet de dépister les chaines/continuité.
+\\
+\\
 \textbullet\ \underline{Indice de Ward}
 \\
-Nous obtenons le dendogramme suivant :
+L'indice de Ward est définie par :
+\\
+\\
+Soient A et B deux classes de centre de gravité $\bar{x}_A$ et $\bar{x}_B$, et de poids $w_A$ et $w_B$.
+\[
+\mu_\text{Ward} (A,B) = \frac{w_A w_B}{w_A + w_B} \left\lVert \bar{x}_B - \bar{x}_A \right\lVert ^2
+\]
+\\
+Avec cette indice, nous obtenons le dendogramme suivant :
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{wardC.png}
@@ -140,11 +148,11 @@ Nous obtenons le dendogramme suivant :
     \label{fig:Ward} 
 \end{figure}
 \\
-Le choix de couper en 4 classes signifie que les données ont été divisées en 4 groupes distincts. 
+On remarque que l'on peut partitionner notre arbre en 4 classes.
 Pour confirmer notre choix d’utiliser 4 classes, nous pouvons utiliser l’histogramme des niveaux de $\mu_{ward}$.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.3\textwidth]{histoward.png}
+    \includegraphics[width=0.4\textwidth]{histoward.png}
     \caption{Histogramme des niveaux $\mu_{ward}$}
     \label{fig:HWard} 
 \end{figure}
@@ -155,12 +163,20 @@ On observe sur la figure que la différence de coût d'agrégation entre quatres
 \\
 \textbullet\ \underline{Indice du saut maximum}
 \\
+La méthode du saut maximum consiste à mesurer la similitude avec la paire la plus eloignée
+L'indice de saut maximum est définie par :
+\\
+\\
+Soient A et B deux classes :
+\[
+\mu(A,B) = \max_{a \in A , b \in B} d(a,b)
+\]
 \\
 Avec l'indice de saut maximum, on obtient le dendogramme suivant:
 \\
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{dendromax4.png}
+    \includegraphics[width=0.7\textwidth]{dendromax4.png}
     \caption{Dendrogramme  indice du saut max}
     \label{fig:dendmax} 
 \end{figure}
@@ -173,37 +189,62 @@ Avec son histogramme associé
     \label{fig:histomax} 
 \end{figure}
 
-\textbullet\ \underline{Indice du saut minimum}
+\textbullet\ \underline{Indice de saut moyen}
 \\
-Bien que cette indice ne soit efficace que pour étudier les continuité/chaines de points,
- on peut l'afficher. Il donne le dendogramme suivant : 
+Soient A et B deux classes, l'indice de saut moyen est définie par :
+
+\[
+\mu(A,B) = \frac{1}{w_A w_B} \sum_{a\in A , b\in B}^{} w_a w_b d(a,b)
+\]
 \\
+avec $w_a$ et $w_b$ dont les poids des classes, et $d$ la distance.
+\\
+\\
+On obtient le dendrogramme suivant :
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{dendrogrammin.png}
-    \caption{Dendrogramme des niveaux saut minimum}
-    \label{fig:dendromin} 
+    \includegraphics[width=0.7\textwidth]{sautmoyendendro4.png}
+    \caption{Dendrogramme  indice du saut moyen}
+    \label{fig:dendmax} 
 \end{figure}
 
-Avec son histogramme associé :
-\\
+Avec son histogramme :
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{histomin4.png}
-    \caption{Histogramme des niveaux saut minimum}
-    \label{fig:histomin} 
+    \includegraphics[width=0.7\textwidth]{histomoyen4.png}
+    \caption{histomoy}
+    \label{fig:dendmax} 
 \end{figure}
 
 
-\newpage
 \subsubsection{Autour du $R^2$}
 
 \subsection{Optimisation d'une partition avec les K-means}
 
+
+Avec les notations du cours,
 \par\textbf{Notons :}
 \begin{itemize}
-    \item $X \in \mathbb{R}^{1000\times 27}$ la matrice des variables quantitatives.    \item $W = \frac{1}{1000} I_{1000}$ la matrice des poids des individus.
+    \item $X \in \mathbb{R}^{1000\times 27}$ la matrice des variables quantitatives.
+    \item $M \in \mathbb{R}^{1000\times 27}$ la matrice indicatrice des modalités.
+    \item $W = \frac{1}{1000} I_{1000}$ la matrice des poids des individus.
     \item $C \in \mathbb{R}^{1000\times 1000}$ la matrice des centres de gravité.
 \end{itemize}
+
+On a alors, 
+\[
+C = (M'WM)^{-1}M'WX
+\]
+\[
+=(M'\frac{1}{1000} I_{1000} M)^{-1}M' \frac{1}{1000} I_{1000} X
+\]
+\[
+=\frac{1000}{1000}(M'M)^{-1} M'X
+\]
+\[
+= (M'M)^{-1} M'X
+\]
 
 \end{document}
