@@ -1,7 +1,7 @@
 \babel@toc {french}{}\relax 
 \contentsline {section}{\numberline {1}Treillis de Galois}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Introduction}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Interprétation et création du treillis de Galois}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.1}Création du treillis}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Interpreation}{3}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Classification hiérarchique de parcelles forestières tropicales}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Préparation des données}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}CAH des parcelles sur les densités de peuplement}{5}{subsection.2.2}%
