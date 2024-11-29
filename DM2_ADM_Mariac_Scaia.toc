@@ -7,4 +7,4 @@
 \contentsline {subsection}{\numberline {2.2}CAH des parcelles sur les densités de peuplement}{5}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Classification ascendante hiérarchique}{5}{subsubsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.3}Optimisation d'une partition avec les K-means}{8}{subsection.2.3}%
-\contentsline {section}{\numberline {3}ANNEXE}{8}{section.3}%
+\contentsline {section}{\numberline {3}ANNEXE}{11}{section.3}%

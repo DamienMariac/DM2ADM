@@ -141,7 +141,8 @@ Soient A et B deux classes de centre de gravité $\bar{x}_A$ et $\bar{x}_B$, et 
 \]
 \\
 Avec cette indice, nous obtenons le dendogramme suivant :
-\begin{figure}[h]
+\\
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{wardC.png}
     \caption{Dendogramme (indice de Ward)}
@@ -234,8 +235,8 @@ Les indices de Rand montrent que les partitions obtenues par les méthodes \text
 
 \subsection{Optimisation d'une partition avec les K-means}
 Après avoir identifié une partition prometteuse avec la CAH. Nous poursuivons l'analyse en optimisant ces groupements à l'aide de la méthode des K-means. 
-La commande kmeans de R nous permet de calculer une partition a partir d'un jeu de 
-donnees et de centres de gravité. Montrons que les centres de gravité sont bien obtenus par la formule que nous avons implementé.
+La commande kmeans de R nous permet de calculer une partition à partir d'un jeu de 
+données et de centres de gravité. Montrons que les centres de gravité sont bien obtenus par la formule que nous avons implementé.
 
 Avec les notations du cours, nous savons que les centres de gravités correspodent aux moyennes par classes de chaque variable. Ainsi, nous pouvons utiliser la formule démontrée en cours.
 \par\textbf{Notons :}
@@ -254,6 +255,73 @@ On a alors,
     &= (M'M)^{-1} M'X
 \end{align*}
 Ce que l'on voulait démontrer.
+\\
+\\
+Après l'implémentation de l'algorithme de K-means, nous observons une valeur de $R^2=0.180$ Cette valeur indique une amélioration de la partition des classes.
+
+Nous souhaitons désormais interpréter les classes obtenues. À cet effet, nous utiliserons l'indice de Tschuprow pour examiner l'association entre les variables catégorielles que sont le type forestier et le type géologique avec les classes formées.
+\\
+\\
+Nous rappelons que l'indice de Tshuprow est donné par : 
+\[
+T^2 = \frac{\phi (X,Y)}{\sqrt{I-1}\sqrt{J-1}} 
+\]
+avec I le nombre de modalité de X un variable nominale et J le nombre de modalité de Y une variable nominale.
+\\
+\\
+Nous obtenons alors pour le type forestier $0.325$, et pour le type géologique $0.369$.
+\\
+Bien que l'indice ne révèle pas une forte association, il montre tout de même une certaine relation entre le type forestier et les classes.
+\\
+Nous analysons la distribution des types forestiers et géologiques au sein de chaque classe dans le but d'extraire des informations pertinentes.
+\\
+\begin{table}[htbp]
+    \centering
+    \begin{minipage}{0.48\textwidth} % Commence un minipage pour le premier tableau
+        \centering
+        \begin{tabular}{|l|l|l|l|l|}
+        \hline
+                            & 1     & 2     & 3     & 4     \\ \hline
+        1                   & 0.500 & 0.667 & 0.432 & 0.208 \\ \hline
+        2                   & 0.106 & 0.008 & 0.054 & 0.190 \\ \hline
+        3                   & 0.058 & 0.004 & 0.014 & 0.028 \\ \hline
+        4                   & 0.086 & 0     & 0.027 & 0.007 \\ \hline
+        5                   & 0.144 & 0.078 & 0.140 & 0.263 \\ \hline
+        6                   & 0.058 & 0.024 & 0.086 & 0.152 \\ \hline
+        7                   & 0.048 & 0.750 & 0.248 & 0.151 \\ \hline
+        \end{tabular}
+        \caption{Proportion type forestier}
+    \end{minipage}\hfill % Fin du premier minipage et ajout d'un espace entre les deux
+    \begin{minipage}{0.48\textwidth} % Commence un minipage pour le second tableau
+        \centering
+
+        \begin{tabular}{|l|l|l|l|l|}
+        \hline
+                            & 1     & 2     & 3     & 4     \\ \hline
+        1                   & 0.038 & 0.019 & 0.158 & 0.145 \\ \hline
+        2                   & 0.087 & 0.004 & 0.131 & 0.052 \\ \hline
+        3                   & 0.240 & 0.758 & 0.018 & 0.161 \\ \hline
+        5                   & 0.221 & 0.012 & 0.423 & 0.191 \\ \hline
+        6                   & 0.413 & 0.206 & 0.270 & 0.450 \\ \hline
+        \end{tabular}
+        \caption{Proportion type geologique}
+    \end{minipage}
+\end{table}
+\newpage
+(Le type géologique 4 n'est pas présent dans les données de base.)
+\\
+\\
+\\
+Globalement, les classes 1 et 4 présentent des similitudes dans les caractéristiques géologiques et forestières. Toutefois, elles se distinguent avec une prédominance du type géologique 1 pour la classe 4.
+La classe 2 se caractérise par une forte présence du type forestier 7 et du type géologique 3, tandis qu'elle affiche une faible proportion du type forestier 3 et une absence de type forestier 4.
+
+Quant à la classe 3, elle révèle une proportion pauvre dans le type géologique 3, représentant seulement 1,8 $\%$ de sa composition.
+
+Ces observations mettent en évidence des variations spécifiques dans la distribution des types géologiques et forestiers au sein des différentes classes.
+
+
+
+\newpage
 \section{ANNEXE}
 
 \end{document}
