@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1732890732.00073 "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.tex" "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.pdf" "DM2_ADM_Mariac_Scaia" 1732890733.81188 0
-  "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.aux" 1732890733.6971 3696 f779b4d62ce4f0b9da638c6620b3d785 "pdflatex"
-  "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.out" 1732890733.69899 1874 b3270a3c1a71f8ff67b07f68f1de1450 "pdflatex"
-  "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.tex" 1732890731.85398 13185 928a8d061ba53e04577aee50a92e10ec ""
-  "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.toc" 1732890733.69927 822 593167c7eabb3337a7a4aa71005e2202 "pdflatex"
+["pdflatex"] 1732892037.8589 "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.tex" "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.pdf" "DM2_ADM_Mariac_Scaia" 1732892039.67798 0
+  "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.aux" 1732892039.56816 4030 c2257f88cd2ecbe627b6ad16bccf9314 "pdflatex"
+  "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.out" 1732892039.56913 1947 04fb5bdd0670591886a76883eee05ce7 "pdflatex"
+  "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.tex" 1732892037.73049 13614 d7bd45b88efd6d940dd2166b671c14d1 ""
+  "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.toc" 1732892039.56941 884 13b8ba48c8b7e96186683dc105f70ac4 "pdflatex"
   "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/R222.png" 1732816454.56649 40405 7906484be239beed54371f4e5225f957 ""
   "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/dendromax4.png" 1732789520.84488 28046 ef8c7ff579da8af7db3ef1836b3597c1 ""
   "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/histomax4.png" 1732789520.84509 7143 9b65c4c630c372e2649ebedea32e8720 ""
@@ -13,6 +13,7 @@
   "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/tableau.png" 1732444824.9797 138830 bdc5896e4b7604a615004d0dfe06cf5c ""
   "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/treillis.png" 1732619448.92752 91261 26630782aee07769fac46cfff848d3a3 ""
   "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/wardC.png" 1732655493.65196 306222 772cd5f08203bb6d20fde509cf458e46 ""
+  "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/wardcouleur.png" 1732824597.84897 42579 95141dc7267c7bf87ec77383030704b4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""

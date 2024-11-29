@@ -167,7 +167,15 @@ Les \( R^2 \) associés à chaque classe sont ensuite calculés :
     \label{fig:EvolR2} 
 \end{figure}
 À partir de ce graphique, nous constatons que les partitions potentielles sont en 2, 3 et 4 classes, avec des \( R^2 \) respectifs de 0.072, 0.111 et 0.148. Nous décidons donc d'opter pour une partition en 4 classes.
-\\\\
+\\
+Ainsi, nous obtenons la répartition suivante :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{wardcouleur.png}
+    \caption{Dendogramme indice de Ward}
+    \label{fig:Ward_couleur} 
+\end{figure}
+
 \textbullet\ \underline{Indice du saut maximum}
 \\
 La méthode du saut maximum consiste à mesurer la similitude avec la paire la plus eloignée
@@ -229,7 +237,7 @@ Après avoir identifié une partition prometteuse avec la CAH. Nous poursuivons 
 La commande kmeans de R nous permet de calculer une partition a partir d'un jeu de 
 donnees et de centres de gravité. Montrons que les centres de gravité sont bien obtenus par la formule que nous avons implementé.
 
-Avec les notations du cours,
+Avec les notations du cours, nous savons que les centres de gravités correspodent aux moyennes par classes de chaque variable. Ainsi, nous pouvons utiliser la formule démontrée en cours.
 \par\textbf{Notons :}
 \begin{itemize}
     \item $X \in \mathbb{R}^{1000\times 27}$ la matrice des variables quantitatives.
@@ -239,17 +247,13 @@ Avec les notations du cours,
 \end{itemize}
 
 On a alors, 
-\[
-C = (M'WM)^{-1}M'WX
-\]
-\[
-=(M'\frac{1}{1000} I_{1000} M)^{-1}M' \frac{1}{1000} I_{1000} X
-\]
-\[
-=\frac{1000}{1000}(M'M)^{-1} M'X
-\]
-\[
-= (M'M)^{-1} M'X
-\]
+
+\begin{align*}
+    C &= (M'WM)^{-1}M'WX = (M'\frac{1}{1000} I_{1000} M)^{-1}M' \frac{1}{1000} I_{1000} X \\
+    &=\frac{1000}{1000}(M'M)^{-1} M'X \\
+    &= (M'M)^{-1} M'X
+\end{align*}
+
+\section{ANNEXE}
 
 \end{document}
