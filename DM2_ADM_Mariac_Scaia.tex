@@ -198,34 +198,7 @@ Avec son histogramme associé
 \end{figure}
 L'examen de la figure \ref{fig:dendmax} révèle la présence de points atypiques, notamment les parcelles 905, 105 et 188, qui se distinguent par leur position en haut à droite du graphique. L'interprétation du nombre optimal de classes à partir de cette figure s'avère délicate. Afin de clarifier cette question, nous avons tracé l'histogramme présenté en figure \ref{fig:histomax}. Celui-ci permet de constater qu'un partitionnement en quatre classes semble le plus pertinent pour notre analyse.
 \\\\
-\textbullet\ \underline{Indice de saut moyen}
-\\
-Soient A et B deux classes, l'indice de saut moyen est définie par :
 
-\[
-\mu(A,B) = \frac{1}{w_A w_B} \sum_{a\in A , b\in B}^{} w_a w_b d(a,b)
-\]
-\\
-avec $w_a$ et $w_b$ dont les poids des classes, et $d$ la distance.
-\\
-\\
-On obtient le dendrogramme suivant :
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{sautmoyendendro4.png}
-    \caption{Dendrogramme  indice du saut moyen}
-    \label{fig:dendmoy} 
-\end{figure}
-
-Avec son histogramme :
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{histomoyen4.png}
-    \caption{histomoy}
-    \label{fig:histomoy} 
-\end{figure}
 \textbullet\ \underline{Comparaison}
 \\\\
 Pour évaluer le degré de similarité entre deux partitions \( P \) et \( P' \), nous utilisons l'indice de Rand. Cette mesure repose sur l'examen de toutes les paires d'éléments présentes dans les partitions.
