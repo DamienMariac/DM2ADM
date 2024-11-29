@@ -1,0 +1,33 @@
+  # Fonction pour calculer l'indice de Rand
+  rand_index <- function(partition1, partition2) {
+    n <- length(partition1)
+
+    # Initialisation des compteurs
+    C1 <- 0 # Même cluster dans P et P'
+    C2 <- 0 # Différents clusters dans P et P'
+    D1 <- 0 # Même cluster dans P mais pas dans P'
+    D2 <- 0 # Même cluster dans P' mais pas dans P
+
+    # Boucle sur toutes les paires possibles
+    for (i in 1:(n - 1)) {
+      for (j in (i + 1):n) {
+        same_in_P <- (partition1[i] == partition1[j])
+        same_in_P_prime <- (partition2[i] == partition2[j])
+
+        if (same_in_P && same_in_P_prime) {
+          C1 <- C1 + 1
+        } else if (!same_in_P && !same_in_P_prime) {
+          C2 <- C2 + 1
+        } else if (same_in_P && !same_in_P_prime) {
+          D1 <- D1 + 1
+        } else if (!same_in_P && same_in_P_prime) {
+          D2 <- D2 + 1
+        }
+      }
+    }
+
+    # Calcul de l'indice de Rand
+    rand_index_value <- (C1 + C2) / (C1 + C2 + D1 + D2)
+
+    return(rand_index_value)
+  }
