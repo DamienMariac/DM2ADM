@@ -1,0 +1,4 @@
+    IC4DP = data.frame(model.matrix(~as.factor(PDP_ward)-1))
+    M = as.matrix(IC4DP)
+    X = as.matrix(datapeuple)
+    CentresC2 = solve(t(M) %% M) %% t(M) %*% X

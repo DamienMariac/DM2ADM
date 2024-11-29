@@ -147,7 +147,6 @@ Avec cette indice, nous obtenons le dendogramme suivant :
     \caption{Dendogramme (indice de Ward)}
     \label{fig:Ward} 
 \end{figure}
-\\
 On remarque que l'on peut partitionner notre arbre en 4 classes.
 Pour confirmer notre choix d’utiliser 4 classes, nous pouvons utiliser l’histogramme des niveaux de $\mu_{ward}$.
 \begin{figure}[H]
@@ -234,9 +233,9 @@ Avec les notations du cours,
 \par\textbf{Notons :}
 \begin{itemize}
     \item $X \in \mathbb{R}^{1000\times 27}$ la matrice des variables quantitatives.
-    \item $M \in \mathbb{R}^{1000\times 27}$ la matrice indicatrice des modalités.
+    \item $M \in \mathbb{R}^{1000\times 4}$ la matrice indicatrice des modalités.
     \item $W = \frac{1}{1000} I_{1000}$ la matrice des poids des individus.
-    \item $C \in \mathbb{R}^{1000\times 1000}$ la matrice des centres de gravité.
+    \item $C \in \mathbb{R}^{4\times 27}$ la matrice des centres de gravité.
 \end{itemize}
 
 On a alors, 
