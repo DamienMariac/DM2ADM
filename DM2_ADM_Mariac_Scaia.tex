@@ -144,7 +144,7 @@ Avec cette indice, nous obtenons le dendogramme suivant :
 \\
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{wardC.png}
+    \includegraphics[width=0.8\textwidth]{WARDDENDO.png}
     \caption{Dendogramme (indice de Ward)}
     \label{fig:Ward} 
 \end{figure}
@@ -211,8 +211,6 @@ L'examen de la figure \ref{fig:dendmax} révèle la présence de points atypique
 \\\\
 Pour évaluer le degré de similarité entre deux partitions \( P \) et \( P' \), nous utilisons l'indice de Rand. Cette mesure repose sur l'examen de toutes les paires d'éléments présentes dans les partitions.
 \\
-Cite le code
-\\
 Nous obtenons les résultats suivant :
 \begin{table}[ht]
     \centering
@@ -234,7 +232,7 @@ Les indices de Rand montrent que les partitions obtenues par les méthodes \text
 
 
 \subsection{Optimisation d'une partition avec les K-means}
-Après avoir identifié une partition prometteuse avec la CAH. Nous poursuivons l'analyse en optimisant ces groupements à l'aide de la méthode des K-means. 
+Après avoir identifié une partition en 4 classes prometteuse avec la CAH. Nous poursuivons l'analyse en optimisant ces groupements à l'aide de la méthode des K-means. 
 La commande kmeans de R nous permet de calculer une partition à partir d'un jeu de 
 données et de centres de gravité. Montrons que les centres de gravité sont bien obtenus par la formule que nous avons implementée.
 
@@ -271,13 +269,13 @@ Après l'implémentation de la méthode des K-means, nous observons une valeur d
     \end{minipage}
 \end{center}
 À partir des deux figures précédentes, nous observons un des effets de la méthode des K-means. La différence la plus marquante concerne la classe 1, où l'on constate une diminution des valeurs atypiques et un changement de la médiane.
-Nous souhaitons désormais interpréter les classes obtenues. À cet effet, nous utiliserons l'indice de Tschuprow pour examiner l'association entre les variables catégorielles que sont le type forestier et le type géologique avec les classes formées.
+Nous souhaitons désormais interpréter les classes obtenues. À cet effet, nous utiliserons l'indice de Tschuprow pour examiner l'association entre les variables que sont le type forestier et le type géologique avec les classes formées.
 
 Nous rappelons que l'indice de Tshuprow est donné par : 
 \[
 T^2 = \frac{\phi^2 (X,Y)}{\sqrt{I-1}\sqrt{J-1}} 
 \]
-avec I le nombre de modalité de X une variable nominale et J le nombre de modalité de Y une variable nominale et $\phi^2$,le coefficient de contingence, il mesure la liaison entre deux variables. 
+avec I le nombre de modalité de X une variable nominale et J le nombre de modalité de Y une variable nominale et $\phi^2$, le coefficient de contingence qui mesure la liaison entre deux variables. 
 \\
 \\
 Nous obtenons alors pour le type forestier $0.325$, et pour le type géologique $0.369$.
