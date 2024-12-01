@@ -268,33 +268,32 @@ Après l'implémentation de la méthode des K-means, nous observons une valeur d
         \captionof{figure}{Boites à moustache pour l'espèce 10 après K-means }
     \end{minipage}
 \end{center}
-À partir des deux figures précédentes, nous observons un des effets de la méthode des K-means. La différence la plus marquante concerne la classe 1, où l'on constate une diminution des valeurs atypiques et un changement de la médiane.
-Nous souhaitons désormais interpréter les classes obtenues. À cet effet, nous utiliserons l'indice de Tschuprow pour examiner l'association entre les variables que sont le type forestier et le type géologique avec les classes formées.
-
+À partir des deux figures précédentes, nous observons un des effets de la méthode des K-means. La différence la plus marquante concerne la classe 1, où l'on constate une diminution des valeurs atypiques et un changement de la médiane.\\
+Nous souhaitons désormais interpréter les classes obtenues. À cet effet, nous utiliserons l'indice de Tschuprow pour examiner l'association entre les variables, à savoir le type forestier et le type géologique, avec les classes formées.
 Nous rappelons que l'indice de Tshuprow est donné par : 
 \[
 T^2 = \frac{\phi^2 (X,Y)}{\sqrt{I-1}\sqrt{J-1}} 
 \]
-avec I le nombre de modalité de X une variable nominale et J le nombre de modalité de Y une variable nominale et $\phi^2$, le coefficient de contingence qui mesure la liaison entre deux variables. 
+avec I le nombre de modalité de X une variable nominale et J le nombre de modalité de Y une variable nominale et $\phi^2$ le coefficient de contingence qui mesure la liaison entre deux variables. 
 \\
-\\
-Nous obtenons alors pour le type forestier $0.325$, et pour le type géologique $0.369$.
+Nous obtenons alors, pour le type forestier, une valeur de $0.325$, et pour le type géologique, une valeur de $0.369$.  
 Bien que l'indice ne révèle pas une forte association, il montre tout de même une certaine relation entre le type forestier et les classes.
-\\
+
 Nous analysons la distribution des types forestiers et géologiques au sein de chaque classe dans le but d'extraire des informations pertinentes.
-\\
-\begin{table}[htbp]
+
+\newpage
+\begin{table}[H]
     \centering
     \begin{minipage}{0.48\textwidth} % Commence un minipage pour le premier tableau
         \centering
         \begin{tabular}{|l|l|l|l|l|}
         \hline
                             & 1     & 2     & 3     & 4     \\ \hline
-        1                   & 0.500 & 0.667 & 0.432 & 0.208 \\ \hline
+        1                   & 0.500 & 0.167 & 0.432 & 0.208 \\ \hline
         2                   & 0.106 & 0.008 & 0.054 & 0.190 \\ \hline
         3                   & 0.058 & 0.004 & 0.014 & 0.028 \\ \hline
         4                   & 0.086 & 0     & 0.027 & 0.007 \\ \hline
-        5                   & 0.144 & 0.078 & 0.140 & 0.263 \\ \hline
+        5                   & 0.144 & 0.047 & 0.140 & 0.263 \\ \hline
         6                   & 0.058 & 0.024 & 0.086 & 0.152 \\ \hline
         7                   & 0.048 & 0.750 & 0.248 & 0.151 \\ \hline
         \end{tabular}
@@ -315,18 +314,16 @@ Nous analysons la distribution des types forestiers et géologiques au sein de c
         \caption{Proportion type geologique}
     \end{minipage}
 \end{table}
-\\
 (Le type géologique 4 n'est pas présent dans les données de base.)
 \\
+
+Globalement, les classes 1 et 4 présentent des similitudes dans leurs caractéristiques géologiques et forestières. Toutefois, elles se distinguent par une prédominance du type géologique 1 dans la classe 4. De plus, elles diffèrent en ce qui concerne la proportion du type forestier 1, qui est plus présente dans la classe 1 que dans la classe 4.
 \\
-\\
-Globalement, les classes 1 et 4 présentent des similitudes dans les caractéristiques géologiques et forestières. Toutefois, elles se distinguent avec une prédominance du type géologique 1 pour la classe 4.
 La classe 2 se caractérise par une forte présence du type forestier 7 et du type géologique 3, tandis qu'elle affiche une faible proportion du type forestier 3 et une absence de type forestier 4.
-
-Quant à la classe 3, elle révèle une proportion pauvre dans le type géologique 3, représentant seulement 1,8 $\%$ de sa composition.
-
+\\
+Quant à la classe 3, elle montre une faible proportion du type géologique 3, représentant seulement 1,8~\% de sa composition.
+\\
 Ces observations mettent en évidence des variations spécifiques dans la distribution des types géologiques et forestiers au sein des différentes classes.
-
 
 
 \newpage

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.10)  1 DEC 2024 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.10)  1 DEC 2024 17:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -927,22 +927,12 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 268.
 See the caption package documentation for explanation.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 277--325
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 277--325
+[9 </Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/avant kkkkk.png> </Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/apres kkkkk.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 317--319
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 277--325
-
- []
-
-[9 </Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/avant kkkkk.png> </Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/apres kkkkk.png>] [10] [11] (/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.aux)
+[10] [11] (/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -955,15 +945,15 @@ Package rerunfilecheck Info: File `DM2_ADM_Mariac_Scaia.out' has not changed.
 (rerunfilecheck)             Checksum: B576D46431BD941BC2D0CA86EAAFAC9B;1955.
  ) 
 Here is how much of TeX's memory you used:
- 37250 strings out of 474116
- 863645 string characters out of 5743681
+ 37255 strings out of 474116
+ 863704 string characters out of 5743681
  1942187 words of memory out of 5000000
- 58997 multiletter control sequences out of 15000+600000
+ 59002 multiletter control sequences out of 15000+600000
  569698 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,14n,87p,831b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.pdf" (11 pages, 562076 bytes).
+Output written on "/Users/utilisateur/Documents/Faculté/Master Maths 2024/M1/Semestre 1/TP BRY/ADM/DM2ADM/DM2_ADM_Mariac_Scaia.pdf" (11 pages, 562223 bytes).
 PDF statistics:
  258 PDF objects out of 1000 (max. 8388607)
  181 compressed objects within 2 object streams
