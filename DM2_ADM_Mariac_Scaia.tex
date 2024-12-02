@@ -70,7 +70,7 @@ Le nœud 57 regroupe les films dramatiques (FD), les films policiers (FP) et les
 \\
 Par ailleurs, ce nœud est lié à la classe 42, qui partage les mêmes caractéristiques mais inclut également des œuvres utilisant des images de synthèse. Cela permet d’y intégrer des films d’horreur (FH).
 \\
-Cette classe peut être interprétée comme un regroupement de film conçues pour provoquer du suspense ou des "frissons".
+Cette classe peut être interprétée comme un regroupement de film conçu pour provoquer du suspense ou des "frissons".
 \\
 \\
 Le nœud 16 représente une classe large regroupant plusieurs types de films et séries partageant diverses caractéristiques : un public adulte, une vocation distractive, et des images réelles. Ce nœud est particulièrement intéressant, car il se connecte à plusieurs autres classes. Ces caractéristiques sont partagées par des genres variés. De ce fait, cette classe regroupe de nombreux types de films et séries, tels que les clips musicaux, les documentaires artistiques, les documentaires sur la nature, les documentaires scientifiques, les films comiques, les films dramatiques, les films de fantasy, les films d’horreur, ainsi que les séries humoristiques et policières.
@@ -114,9 +114,9 @@ En analysant la contribution de chaque espèce, nous obtenons le tableau suivant
     \end{tabular}
     \end{table}
 \\
-Nous voyons que les variables ne contribuent pas tous de la même manière. Les contributions des espèces gen1 à gen27 à la distance euclidienne ne sont pas uniformes. Par exemple, gen8 représente 64.90 \% de la distance, ce qui montre que les variations dans cette dimension dominent les calculs de dissimilarité.
+Nous voyons que les variables ne contribuent pas toutes de la même manière. Les contributions des espèces gen1 à gen27 à la distance euclidienne ne sont pas uniformes. Par exemple, gen8 représente 64.90 \% de la distance, ce qui montre que les variations dans cette dimension dominent les calculs de dissimilarité.
 \\
-Nous standardisons les densités de peuplement et on note \( \mathbf{Z} \) la matrice associée :
+Nous standardisons les densités de peuplement et notons \( \mathbf{Z} \) la matrice associée :
 
 \[
 z_i^j = \frac{x_i^j - \overline{x}^j}{\sigma_{x^j}}
@@ -125,8 +125,8 @@ avec \( x_i^j \) la densité de l’espèce \( j \) sur la parcelle \( i \), \( 
 La standardisation assure que chaque dimension contribue de manière équivalente à la mesure de la dissimilarité, indépendamment de son échelle initiale ou de sa variabilité.
 \subsection{CAH des parcelles sur les densités de peuplement}
 \subsubsection{Classification ascendante hiérarchique}
-Dans cette section, nous procéderons à la classification des parcelles en fonction de leur peuplement arboré. L'objectif est de déterminer le nombre optimal de classes pertinentes pour cette partition. À partir des données standardisées représentant les densités de peuplement obtenues à la question \ref{Q1}, nous utiliserons le code en langage R fourni dans le sujet pour effectuer une classification ascendante hiérarchique (CAH). Cette méthode nous permettra d’identifier les classes les plus adaptées à la caractérisation des parcelles.
-Nous allons utiliser divers indice d'agrégation (Ward, maximum, moyen) qui permettent de mesurer la difficulté d'agrégation de deux classes.
+Dans cette section, nous procédons à la classification des parcelles en fonction de leur peuplement arboré. L'objectif est de déterminer le nombre optimal de classes pertinentes pour cette partition. À partir des données standardisées représentant les densités de peuplement obtenues à la question \ref{Q1}, nous utiliserons le code en langage R fourni dans le sujet pour effectuer une classification ascendante hiérarchique (CAH). Cette méthode nous permettra d’identifier les classes les plus adaptées à la caractérisation des parcelles.
+Nous utiliserons divers indices d'agrégation (Ward, maximum, moyen) qui permettent de mesurer la difficulté d'agrégation de deux classes.
 L'indice de saut minimum étant à part nous ne l'utiliserons pas. En effet, ses résultats sont trop différents. Il permet de dépister les chaines/continuité.
 \\
 \\
@@ -144,7 +144,7 @@ Avec cette indice, nous obtenons le dendrogramme suivant :
 \\
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{WARDDENDO.png}
+    \includegraphics[width=0.8\textwidth]{wardC.png}
     \caption{Dendrogramme (indice de Ward)}
     \label{fig:Ward} 
 \end{figure}
@@ -180,7 +180,7 @@ Ainsi, nous obtenons la répartition suivante :
 \textbullet\ \underline{Indice du saut maximum}
 \\
 La méthode du saut maximum consiste à mesurer la similitude avec la paire la plus eloignée
-L'indice de saut maximum est définie par :
+L'indice de saut maximum est défini par :
 \\
 \\
 Soient A et B deux classes :
@@ -192,7 +192,7 @@ Avec l'indice de saut maximum, on obtient le dendrogramme suivant:
 \\
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{dendromax4.png}
+    \includegraphics[width=0.5\textwidth]{RRRR.png}
     \caption{Dendrogramme  indice du saut max}
     \label{fig:dendmax} 
 \end{figure}
@@ -234,9 +234,9 @@ Les indices de Rand montrent que les partitions obtenues par les méthodes \text
 \subsection{Optimisation d'une partition avec les K-means}
 Après avoir identifié une partition en 4 classes prometteuse avec la CAH. Nous poursuivons l'analyse en optimisant ces groupements à l'aide de la méthode des K-means. 
 La commande kmeans de R nous permet de calculer une partition à partir d'un jeu de 
-données et de centres de gravité. Montrons que les centres de gravité sont bien obtenus par la formule que nous avons implementée.
+données et de centres de gravité. Montrons que les centres de gravité sont bien obtenus par la formule que nous avons implémentée.
 
-Avec les notations du cours, nous savons que les centres de gravités correspondent aux moyennes par classes de chaque variable. Ainsi, nous pouvons utiliser la formule démontrée en cours.
+Avec les notations du cours, nous savons que les centres de gravités correspondent aux moyennes par classe de chaque variable. Ainsi, nous pouvons utiliser la formule démontrée en cours.
 \par\textbf{Notons :}
 \begin{itemize}
     \item $X \in \mathbb{R}^{1000\times 27}$ la matrice des variables quantitatives.
@@ -255,33 +255,32 @@ On a alors,
 Ce que l'on voulait démontrer.
 \\
 \\
-Après l'implémentation de la méthode des K-means, nous observons une valeur de $R^2=0.180$ Cette valeur indique une amélioration de la partition des classes.
+Après l'implémentation de la méthode des K-means, nous observons une valeur de $R^2=0.180$. Cette valeur indique une amélioration de la partition des classes.
 
 \begin{center}
     \begin{minipage}{0.45\textwidth}
         \includegraphics[width=\textwidth]{avant kkkkk.png}
-        \captionof{figure}{Boites à moustache pour l'espèce 10 avant K-means }
+        \captionof{figure}{Boites à moustache pour l'espèce 8 avant K-means }
     \end{minipage}
     \hfill
     \begin{minipage}{0.45\textwidth}
         \includegraphics[width=\textwidth]{apres kkkkk.png}
-        \captionof{figure}{Boites à moustache pour l'espèce 10 après K-means }
+        \captionof{figure}{Boites à moustache pour l'espèce 8 après K-means }
     \end{minipage}
 \end{center}
 À partir des deux figures précédentes, nous observons un des effets de la méthode des K-means. La différence la plus marquante concerne la classe 1, où l'on constate une diminution des valeurs atypiques et un changement de la médiane.\\
 Nous souhaitons désormais interpréter les classes obtenues. À cet effet, nous utiliserons l'indice de Tschuprow pour examiner l'association entre les variables, à savoir le type forestier et le type géologique, avec les classes formées.
-Nous rappelons que l'indice de Tshuprow est donné par : 
+Nous rappelons que l'indice de Tschuprow est donné par : 
 \[
 T^2 = \frac{\phi^2 (X,Y)}{\sqrt{I-1}\sqrt{J-1}} 
 \]
-avec I le nombre de modalité de X une variable nominale et J le nombre de modalité de Y une variable nominale et $\phi^2$ le coefficient de contingence qui mesure la liaison entre deux variables. 
+avec I le nombre de modalités de X une variable nominale et J le nombre de modalités de Y une variable nominale et $\phi^2$ le coefficient de contingence qui mesure la liaison entre deux variables. 
 \\
 Nous obtenons alors, pour le type forestier, une valeur de $0.325$, et pour le type géologique, une valeur de $0.369$.  
 Bien que l'indice ne révèle pas une forte association, il montre tout de même une certaine relation entre le type forestier et les classes.
 
 Nous analysons la distribution des types forestiers et géologiques au sein de chaque classe dans le but d'extraire des informations pertinentes.
 
-\newpage
 \begin{table}[H]
     \centering
     \begin{minipage}{0.48\textwidth} % Commence un minipage pour le premier tableau
@@ -319,7 +318,7 @@ Nous analysons la distribution des types forestiers et géologiques au sein de c
 
 Globalement, les classes 1 et 4 présentent des similitudes dans leurs caractéristiques géologiques et forestières. Toutefois, elles se distinguent par une prédominance du type géologique 1 dans la classe 4. De plus, elles diffèrent en ce qui concerne la proportion du type forestier 1, qui est plus présente dans la classe 1 que dans la classe 4.
 \\
-La classe 2 se caractérise par une forte présence du type forestier 7 et du type géologique 3, tandis qu'elle affiche une faible proportion du type forestier 3 et une absence de type forestier 4.
+La classe 2 se caractérise par une forte présence du type forestier 7 et du type géologique 3, tandis qu'elle affiche une faible proportion du type forestier 3 et une absence du type forestier 4.
 \\
 Quant à la classe 3, elle montre une faible proportion du type géologique 3, représentant seulement 1,8~\% de sa composition.
 \\
